@@ -14,18 +14,23 @@ export default function Home() {
       setResponseData(data);
     }
   }, []);
-  let { url, title } = responseData;
+  let { url, title, explanation } = responseData;
+  console.log(responseData);
 
   return (
-    <div>
+    <div className="columna">
       <h1>{title}</h1>
-      <iframe
-        src={url}
-        width="560"
-        height="315"
-        frameborder="0"
-        allowfullscreen="true"
-      ></iframe>
+      <div className="littePadding">
+        <div className="fila">
+          <iframe src={url} frameBorder="0" allowFullScreen={true}></iframe>
+          <div className="pequenio">
+            <p> {explanation} </p>
+          </div>
+        </div>
+      </div>
+      <div className="footer">
+        <p>All information is provided by NASA APOD API</p>
+      </div>
     </div>
   );
 }

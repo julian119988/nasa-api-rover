@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <link rel="icon" href="http://localhost:3000/nasa.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Nasa daily</title>
+  <style>@import url(https://fonts.googleapis.com/css2?family=Oswald&display=swap);</style><style>* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/static/media/white-texture.62a2ef74.jpg);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+html {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+.footer {
+  background-color: #928c8a;
+  color: #e7e5f0;
+  font-weight: bold;
+  font: inherit;
+  width: 100%;
+  height: 20vh;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  bottom: 0;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+.littePadding {
+  padding: 10px;
+}
+
+@media (max-width: 1000px) {
+  h1 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 2vh;
+    font-size: 7vh;
+  }
+
+  iframe {
+    width: 40vh;
+    height: 22.5vh;
+  }
+}
+
+@media (min-width: 1000px) {
+  .fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  p {
+    word-wrap: break-word;
+    font-size: 2vh;
+  }
+  .pequenio {
+    width: 500px;
+  }
+
+  h1 {
+    font-family: "Oswald", sans-serif;
+    font-size: 7vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  iframe {
+    width: 70vh;
+    height: 39.375vh;
+  }
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly9zcmMvQXBwLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFFQTtFQUNFLHNCQUFzQjtBQUN4Qjs7QUFFQTtFQUNFLHlEQUE0QztFQUM1QyxzQkFBc0I7RUFDdEIsU0FBUztFQUNULFVBQVU7RUFDVixZQUFZO0FBQ2Q7QUFDQTtFQUNFLFlBQVk7QUFDZDs7QUFFQTtFQUNFLFlBQVk7QUFDZDtBQUNBO0VBQ0UseUJBQXlCO0VBQ3pCLGNBQWM7RUFDZCxpQkFBaUI7RUFDakIsYUFBYTtFQUNiLFdBQVc7RUFDWCxZQUFZO0VBQ1osa0JBQWtCO0VBQ2xCLG1CQUFtQjtFQUNuQixhQUFhO0VBQ2IsdUJBQXVCO0VBQ3ZCLGtCQUFrQjtFQUNsQixTQUFTO0FBQ1g7O0FBRUE7RUFDRSxhQUFhO0VBQ2Isc0JBQXNCO0VBQ3RCLHVCQUF1QjtFQUN2QixtQkFBbUI7RUFDbkIsa0JBQWtCO0VBQ2xCLFlBQVk7QUFDZDtBQUNBO0VBQ0UsYUFBYTtBQUNmOztBQUVBO0VBQ0U7SUFDRSxpQ0FBaUM7SUFDakMsa0JBQWtCO0lBQ2xCLGNBQWM7RUFDaEI7O0VBRUE7SUFDRSxXQUFXO0lBQ1gsY0FBYztFQUNoQjtBQUNGOztBQUVBO0VBQ0U7SUFDRSxhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLDZCQUE2QjtJQUM3QixtQkFBbUI7SUFDbkIsV0FBVztFQUNiO0VBQ0E7SUFDRSxxQkFBcUI7SUFDckIsY0FBYztFQUNoQjtFQUNBO0lBQ0UsWUFBWTtFQUNkOztFQUVBO0lBQ0UsaUNBQWlDO0lBQ2pDLGNBQWM7SUFDZCxlQUFlO0lBQ2Ysa0JBQWtCO0VBQ3BCOztFQUVBO0lBQ0UsV0FBVztJQUNYLGdCQUFnQjtFQUNsQjtBQUNGIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoXCJodHRwczovL2ZvbnRzLmdvb2dsZWFwaXMuY29tL2NzczI/ZmFtaWx5PU9zd2FsZCZkaXNwbGF5PXN3YXBcIik7XHJcblxyXG4qIHtcclxuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xyXG59XHJcblxyXG5ib2R5IHtcclxuICBiYWNrZ3JvdW5kLWltYWdlOiB1cmwoXCIuL3doaXRlLXRleHR1cmUuanBnXCIpO1xyXG4gIGJhY2tncm91bmQtc2l6ZTogY292ZXI7XHJcbiAgbWFyZ2luOiAwO1xyXG4gIHBhZGRpbmc6IDA7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG59XHJcbmh0bWwge1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG5cclxuI3Jvb3Qge1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG4uZm9vdGVyIHtcclxuICBiYWNrZ3JvdW5kLWNvbG9yOiAjOTI4YzhhO1xyXG4gIGNvbG9yOiAjZTdlNWYwO1xyXG4gIGZvbnQtd2VpZ2h0OiBib2xkO1xyXG4gIGZvbnQ6IGluaGVyaXQ7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAyMHZoO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIGJvdHRvbTogMDtcclxufVxyXG5cclxuLmNvbHVtbmEge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcclxuICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gIHRleHQtYWxpZ246IGNlbnRlcjtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuLmxpdHRlUGFkZGluZyB7XHJcbiAgcGFkZGluZzogMTBweDtcclxufVxyXG5cclxuQG1lZGlhIChtYXgtd2lkdGg6IDEwMDBweCkge1xyXG4gIGgxIHtcclxuICAgIGZvbnQtZmFtaWx5OiBcIk9zd2FsZFwiLCBzYW5zLXNlcmlmO1xyXG4gICAgbWFyZ2luLWJvdHRvbTogMnZoO1xyXG4gICAgZm9udC1zaXplOiA3dmg7XHJcbiAgfVxyXG5cclxuICBpZnJhbWUge1xyXG4gICAgd2lkdGg6IDQwdmg7XHJcbiAgICBoZWlnaHQ6IDIyLjV2aDtcclxuICB9XHJcbn1cclxuXHJcbkBtZWRpYSAobWluLXdpZHRoOiAxMDAwcHgpIHtcclxuICAuZmlsYSB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IHJvdztcclxuICAgIGp1c3RpZnktY29udGVudDogc3BhY2UtZXZlbmx5O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gIH1cclxuICBwIHtcclxuICAgIHdvcmQtd3JhcDogYnJlYWstd29yZDtcclxuICAgIGZvbnQtc2l6ZTogMnZoO1xyXG4gIH1cclxuICAucGVxdWVuaW8ge1xyXG4gICAgd2lkdGg6IDUwMHB4O1xyXG4gIH1cclxuXHJcbiAgaDEge1xyXG4gICAgZm9udC1mYW1pbHk6IFwiT3N3YWxkXCIsIHNhbnMtc2VyaWY7XHJcbiAgICBmb250LXNpemU6IDd2aDtcclxuICAgIG1hcmdpbi10b3A6IDF2aDtcclxuICAgIG1hcmdpbi1ib3R0b206IDF2aDtcclxuICB9XHJcblxyXG4gIGlmcmFtZSB7XHJcbiAgICB3aWR0aDogNzB2aDtcclxuICAgIGhlaWdodDogMzkuMzc1dmg7XHJcbiAgfVxyXG59XHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><script charset="utf-8" src="Nasa%20daily_files/main_004.js"></script><script charset="utf-8" src="Nasa%20daily_files/main_006.js"></script><script charset="utf-8" src="Nasa%20daily_files/main.js"></script><script charset="utf-8" src="Nasa%20daily_files/main_002.js"></script><script charset="utf-8" src="Nasa%20daily_files/main_005.js"></script></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="columna"><h1>Found on the Moon: Candidate for Oldest Known Earth Rock</h1><div class="littePadding"><div class="fila"><iframe allowfullscreen="" src="Nasa%20daily_files/V0UBZh6Hf-s.htm" frameborder="0"></iframe><div class="pequenio"><p> 
+Was the oldest known rock on Earth found on the Moon? Quite possibly.  
+The story opens with the Apollo 14 lunar mission. Lunar sample 14321, a 
+large rock found in Cone crater by astronaut Alan Shepard, when analyzed
+ back on Earth, was found to have a fragment that was a much better 
+match to Earth rocks than other Moon rocks.  Even more surprising, that 
+rock section has recently been dated back 4 billion years, making it 
+older, to within measurement uncertainty, than any rock ever found on 
+Earth.  A leading hypothesis now holds that an ancient comet or asteroid
+ impact launched Earth rocks into the Solar System, some of which fell 
+back to the Moon, became mixed with heated lunar soil and other rocks, 
+cooled, and re-fragmented.  The video features an internal X-ray scan of
+ 14321 showing multiple sections with markedly different chemistries. 
+Moon rocks will continue to be studied to learn a more complete history 
+of the Moon, the Earth, and the early Solar System.  Friday marks the 
+50th Anniversary of the Apollo 14 landing on the Moon. </p></div></div></div><div class="footer"><p>All information is provided by NASA APOD API</p></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="Nasa%20daily_files/bundle.js"></script><script src="Nasa%20daily_files/0.js"></script><script src="Nasa%20daily_files/main_003.js"></script>
+
+</body></html>
